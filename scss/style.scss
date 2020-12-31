@@ -1,5 +1,4 @@
 @import "./config";
-@import "./listings";
 
 header {
   background: url("/images/bg-header-mobile.svg") 100% 100% / 100% no-repeat
@@ -7,6 +6,11 @@ header {
   position: relative;
   height: 140px;
   width: 100%;
+
+  @media screen and (min-width: 750px) {
+    background: url("/images/bg-header-desktop.svg") 100% 100% / 100% 100%
+      no-repeat $desaturatedDarkCyan;
+  }
 
   .filters {
     background-color: $white;
@@ -17,8 +21,11 @@ header {
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 80%;
     padding: 1rem;
+    @media screen and (min-width: 750px) {
+      padding: 1rem 2rem;
+    }
 
     .filter-btns {
       @include flex(row wrap, space-between, flex-start);
@@ -44,18 +51,34 @@ header {
           @include flex(row nowrap, center, center);
           padding: 0.4rem;
           cursor: pointer;
+          transition: all 0.2s;
+          @media screen and (min-width: 750px) {
+            &:hover {
+              background-color: $veryDarkGrayishCyan;
+            }
+          }
         }
       }
     }
 
     .btn-clear {
       border: none;
+      border-bottom: 1px solid transparent;
       background: transparent;
       color: $darkGrayishCyan;
       cursor: pointer;
       font-weight: 700;
       font-size: 0.8rem;
       letter-spacing: 0.5px;
+      transition: all 0.2s;
+      @media screen and (min-width: 500px) {
+        &:hover {
+          color: $desaturatedDarkCyan;
+          border-bottom: 1px solid $desaturatedDarkCyan;
+        }
+      }
     }
   }
 }
+
+@import "./listings";

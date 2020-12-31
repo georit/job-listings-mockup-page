@@ -20,118 +20,17 @@ img {
   max-width: 100%;
 }
 
-.listings {
-  padding: 8rem 5%;
-  width: 100%;
-}
-
-.listings .listing {
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 4px 16px #bddbdb;
-  padding: 45px 1.2rem 1.2rem;
-  position: relative;
-}
-
-.listings .listing .company-logo {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: -20px;
-}
-
-.listings .listing .company-name,
-.listings .listing .new,
-.listings .listing .featured {
-  display: inline;
-  color: white;
-  font-weight: 700;
-}
-
-.listings .listing .company-name {
-  color: #5ba4a4;
-  margin-right: 1rem;
-}
-
-.listings .listing .new,
-.listings .listing .featured {
-  background-color: #5ba4a4;
-  border-radius: 35px;
-  padding: 0.5rem 0.5rem 0.3rem;
-  font-size: 0.8rem;
-}
-
-.listings .listing .featured {
-  background-color: #2c3a3a;
-  margin-left: 0.2rem;
-}
-
-.listings .listing .job-title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  padding: 1rem 0;
-}
-
-.listings .listing .other-info {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  color: #b2bdbd;
-}
-
-.listings .listing .other-info-item {
-  margin-right: 0.5rem;
-}
-
-.listings .listing .other-info-item.dot {
-  height: 4px;
-  width: 4px;
-  background-color: #b2bdbd;
-  border-radius: 50%;
-}
-
-.listings .listing .filters {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 1rem;
-  border-top: 1px solid #b2bdbd;
-}
-
-.listings .listing .filters .filter {
-  color: #5ba4a4;
-  background-color: #eef6f6;
-  font-weight: 700;
-  padding: 0.5rem 0.5rem 0.3rem;
-  margin: 1rem 1rem 0 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.listings .listing.featured {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-
-.listings .listing.featured::before {
-  content: "";
-  height: 100%;
-  width: 5px;
-  background-color: #5ba4a4;
-  position: absolute;
-  right: 100%;
-  top: 0;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
 header {
   background: url("/images/bg-header-mobile.svg") 100% 100%/100% no-repeat #5ba4a4;
   position: relative;
   height: 140px;
   width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  header {
+    background: url("/images/bg-header-desktop.svg") 100% 100%/100% 100% no-repeat #5ba4a4;
+  }
 }
 
 header .filters {
@@ -146,8 +45,14 @@ header .filters {
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 80%;
   padding: 1rem;
+}
+
+@media screen and (min-width: 750px) {
+  header .filters {
+    padding: 1rem 2rem;
+  }
 }
 
 header .filters .filter-btns {
@@ -185,14 +90,194 @@ header .filters .filter-btns .filter-btn .icon-remove-container {
   justify-content: center;
   padding: 0.4rem;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media screen and (min-width: 750px) {
+  header .filters .filter-btns .filter-btn .icon-remove-container:hover {
+    background-color: #2c3a3a;
+  }
 }
 
 header .filters .btn-clear {
   border: none;
+  border-bottom: 1px solid transparent;
   background: transparent;
   color: #7b8e8e;
   cursor: pointer;
   font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+@media screen and (min-width: 500px) {
+  header .filters .btn-clear:hover {
+    color: #5ba4a4;
+    border-bottom: 1px solid #5ba4a4;
+  }
+}
+
+.listings {
+  padding: 8rem 5%;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .listings {
+    padding: 8rem 10%;
+  }
+}
+
+.listings .listing {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px #bddbdb;
+  padding: 45px 1.2rem 1.2rem;
+  position: relative;
+}
+
+.listings .listing .company-logo {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -20px;
+}
+
+@media screen and (min-width: 750px) {
+  .listings .listing .company-logo {
+    height: 80px;
+    width: 80px;
+    position: unset;
+    top: unset;
+    margin-right: 2rem;
+  }
+}
+
+.listings .listing .job-info {
+  flex-shrink: 0;
+}
+
+.listings .listing .company-name,
+.listings .listing .new,
+.listings .listing .featured {
+  display: inline;
+  color: white;
+  font-weight: 700;
+}
+
+.listings .listing .company-name {
+  color: #5ba4a4;
+  margin-right: 1rem;
+}
+
+.listings .listing .new,
+.listings .listing .featured {
+  background-color: #5ba4a4;
+  border-radius: 35px;
+  padding: 0.5rem 0.5rem 0.3rem;
+  font-size: 0.8rem;
+}
+
+.listings .listing .featured {
+  background-color: #2c3a3a;
+  margin-left: 0.2rem;
+}
+
+.listings .listing .job-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  margin-right: 3rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+  .listings .listing .job-title:hover {
+    color: #5ba4a4;
+  }
+}
+
+.listings .listing .other-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  color: #b2bdbd;
+}
+
+.listings .listing .other-info-item {
+  margin-right: 0.5rem;
+}
+
+.listings .listing .other-info-item.dot {
+  height: 4px;
+  width: 4px;
+  background-color: #b2bdbd;
+  border-radius: 50%;
+}
+
+.listings .listing .filters {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  border-top: 1px solid #b2bdbd;
+}
+
+@media screen and (min-width: 750px) {
+  .listings .listing .filters {
+    margin: 0 0 0 auto;
+    border-top: none;
+  }
+}
+
+.listings .listing .filters .filter {
+  color: #5ba4a4;
+  background-color: #eef6f6;
+  font-weight: 700;
+  padding: 0.5rem 0.5rem 0.3rem;
+  margin: 1rem 1rem 0 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media screen and (min-width: 750px) {
+  .listings .listing .filters .filter {
+    margin-top: 0;
+  }
+  .listings .listing .filters .filter:hover {
+    background-color: #5ba4a4;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .listings .listing {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+}
+
+.listings .listing.featured {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.listings .listing.featured::before {
+  content: "";
+  height: 100%;
+  width: 5px;
+  background-color: #5ba4a4;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
