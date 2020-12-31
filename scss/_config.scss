@@ -1,0 +1,38 @@
+// variables
+$desaturatedDarkCyan: hsl(180, 29%, 50%);
+$bgColor: hsl(180, 52%, 96%);
+$filterTabletsBgColor: hsl(180, 31%, 95%);
+$darkGrayishCyan: hsl(180, 8%, 52%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+$white: hsl(0, 0%, 100%);
+$fontFamily: "Spartan", sans-serif;
+
+// flexbox
+@mixin flex($flow, $align, $justify) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bgColor;
+  color: $veryDarkGrayishCyan;
+  font-family: $fontFamily;
+  font-size: 15px;
+  font-weight: 500;
+  max-width: 1980px;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+img {
+  max-width: 100%;
+}

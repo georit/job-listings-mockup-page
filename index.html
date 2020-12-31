@@ -10,81 +10,92 @@
       href="./images/favicon-32x32.png"
     />
     <title>Job Listings</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="filters">
-          <div class="filter-buttons">
-            <div class="filter-btn">
-              <p class="filter-name">Frontend</p>
-              <div class="icon-remove-container">
-                <svg
-                  class="icon-remove"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                >
-                  <path
-                    fill="#FFF"
-                    fill-rule="evenodd"
-                    d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="filter-btn">
-              <p class="filter-name">CSS</p>
-              <div class="icon-remove-container">
-                <svg
-                  class="icon-remove"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                >
-                  <path
-                    fill="#FFF"
-                    fill-rule="evenodd"
-                    d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="filter-btn">
-              <p class="filter-name">JavaScript</p>
-              <div class="icon-remove-container">
-                <svg
-                  class="icon-remove"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                >
-                  <path
-                    fill="#FFF"
-                    fill-rule="evenodd"
-                    d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
-                  />
-                </svg>
-              </div>
+    <header>
+      <div class="filters">
+        <div class="filter-btns">
+          <div class="filter-btn">
+            <p class="filter-name">Frontend</p>
+            <div class="icon-remove-container">
+              <svg
+                class="icon-remove"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+              >
+                <path
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
+                />
+              </svg>
             </div>
           </div>
-          <button class="btn btn-clear">Clear</button>
+          <div class="filter-btn">
+            <p class="filter-name">CSS</p>
+            <div class="icon-remove-container">
+              <svg
+                class="icon-remove"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+              >
+                <path
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="filter-btn">
+            <p class="filter-name">JavaScript</p>
+            <div class="icon-remove-container">
+              <svg
+                class="icon-remove"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+              >
+                <path
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
-      </header>
-      <div class="listings">
-        <div class="listing">
-          <img src="./images/photosnap.svg" alt="logo" class="company-logo" />
-          <p class="company-name">Photosnap</p>
-          <p class="new">NEW!</p>
-          <p class="featured">FEATURED</p>
-          <div class="other-info">
-            <p class="date-listed">1d ago</p>
-            <div class="dot"></div>
-            <p class="duration">Full Time</p>
-            <div class="dot"></div>
-            <p class="location">USA only</p>
-          </div>
+        <button class="btn btn-clear">Clear</button>
+      </div>
+    </header>
+    <div class="listings">
+      <div class="listing">
+        <img src="./images/photosnap.svg" alt="logo" class="company-logo" />
+        <p class="company-name">Photosnap</p>
+        <p class="new">NEW!</p>
+        <p class="featured">FEATURED</p>
+        <p class="job-title">Senior Frontend Developer</p>
+        <div class="other-info">
+          <p class="other-info-item date-listed">1d ago</p>
+          <div class="other-info-item dot"></div>
+          <p class="other-info-item duration">Full Time</p>
+          <div class="other-info-item dot"></div>
+          <p class="other-info-item location">USA only</p>
+        </div>
+        <div class="filters">
+          <p class="filter">Frontend</p>
+          <p class="filter">Senior</p>
+          <p class="filter">HTML</p>
+          <p class="filter">CSS</p>
+          <p class="filter">JavaScript</p>
         </div>
       </div>
     </div>
