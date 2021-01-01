@@ -1,8 +1,8 @@
 .listings {
-  padding: 8rem 5%;
+  padding: 3rem 5%;
   width: 100%;
   @media screen and (min-width: 750px) {
-    padding: 8rem 10%;
+    padding: 3rem 10%;
   }
 
   .listing {
@@ -11,6 +11,8 @@
     box-shadow: 0 4px 16px lighten($desaturatedDarkCyan, 30%);
     padding: 45px 1.2rem 1.2rem;
     position: relative;
+    margin-bottom: 2.5rem;
+    @include flex(column nowrap, flex-start, flex-start);
 
     .company-logo {
       height: 50px;
@@ -133,5 +135,12 @@
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
     }
+  }
+}
+
+.listings.filtered {
+  padding: 10rem 5%;
+  @media screen and (min-width: 750px) {
+    padding: 5rem 10%;
   }
 }
